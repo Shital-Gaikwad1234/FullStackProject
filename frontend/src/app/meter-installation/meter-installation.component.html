@@ -1,0 +1,228 @@
+<div class="header-container">
+  <div class="header-content">
+    <h2  class="header-title">Meter Installation</h2>
+    <div class="ci-count-box" > <label>Number of MI {{23}}</label> </div>
+  </div>
+</div>
+<div class="profile-container">
+<table class="table table-striped">
+    <thead class="headRow">
+      <tr>
+<th>Sequence_No</th> 
+<th>Discom</th> 
+<th>Zone</th>
+<th>Circle</th>
+<th>Division</th>
+<th>Sub_Division</th>
+<th>Substation_Code</th>
+<th>Feeder_Name</th>
+<th>Consumer_Number</th>
+<th>Landmark</th>
+<th>Consumer_Name</th>
+<th>Address</th>
+<th>Area</th>
+<th>Mobile_Number</th>
+<th>Email_ID</th>
+<th>Billing_Type</th>
+<th>Old_Meter_Number</th>
+<th>Old_Meter_Manufacturer</th>
+<th>Load_Unit</th>
+<th>Meter_Location</th>
+<th>Old_Meter_Status</th>
+<th>Old_meter_Current_Kva_CI</th>
+<th>Old_meter_Current_Kvah_CI</th>
+<th>Old_meter_Current_Kwh_CI</th>
+<th>Old_Meter_Phase</th>
+<th>Survey_done_by</th>
+<th>Contractor_Name</th>
+<th>CI_Date</th>
+<th>CI_Remarks</th>
+
+<th>LT_Pole_Condition_for_service_Cable</th>
+<th>Is_Armoured_Service_Cable_To_be_Installed</th>
+<th>Neutral_Availability</th>
+<th>Village_Name</th>
+<th>Village_Census</th>
+<th>Gram_Panchayat</th>
+<th>Bolck</th>
+<th>Majra/Moholla/Street Name</th>
+<th>Old Meter Billing_Type</th>
+<th>Sacn Barcode Sticker placed on old meter </th>
+<th>Old Meter Number</th>
+<th>New Meter Number</th>
+<th>Mismatch between old meter number of CI and MI </th>
+<th>New Meter Billing Type</th>
+<th>Meter Communication Type</th>
+<th>Meter CT Ratio</th>
+<th>Meter PT Ratio</th>
+<th>Line CT Ratio</th>
+<th>Line PT Ratio </th>
+<th>Network Provider Name SIM1</th>
+<th>Signal Strength SIM1</th>
+<th>Signal Category SIM1</th>
+<th>Network Type1</th>
+<th>Network Provider Name SIM2</th>
+<th>Signal Strength SIM2</th>
+<th>Signal Category SIM2</th>
+<th>Network Type2</th>
+<th>Length of Service Cable in Meter</th>
+<th>Cable Type</th>
+<th>Old Meter Current Kwh MI</th>
+<th>Mismatch between Reading of CI and MI </th>
+<th>Old meter current KVah MI</th>
+<th>Old Meter KVA MI number</th>
+<th>New Meter Current KWH</th>
+<th>New Meter Current KVah</th>
+<th>New Meter Phase</th>
+<th>Meter Installation Type/th>
+<th>Meter Box Seal Number 1</th>
+<th>Meter Box Seal Number 2</th>
+<th>NIC Card1</th>
+<th>NIC Card2</th>
+<th>NIC_Seal_Number1</th>
+<th>NIC_Seal_Type</th>
+<th>Meter_Body_Seal_Type</th>
+<th>Terminal_Seal_Number1</th>
+<th>Terminal_Seal_Number2 </th>
+<th>Meter_Box_Seal_Type</th>
+<th>MRN_No</th>
+<th>Page_No</th>
+<th>New_Meter_Manufacturer</th>
+<th>Error_Code_Error_Description</th>
+<th>latitude</th>
+<th>longitude</th>
+<th>Updated_By</th>
+<th>New_Meter_Installed_Date</th>
+<th>Status</th>
+<th>QC_Contractor_Approved_Date</th>
+<th>Approved_By_QC_Contractor</th>
+<th>IntelliSmart_Approved_Date</th>
+<th>Approved_By_IntelliSmart</th>
+<th>Discom_Approved_Date</th>
+<th>Approved_By_Discom</th>
+<th>QC_Contractor_Rejected_Remarks</th>
+<th>QC_Contractor_Rejected_Date</th>
+<th>Rejected_By_QC_Contractor</th>
+<th>IntelliSmart_Rejected_Remarks</th>
+<th>IntelliSmart_Rejected_Date</th>
+<th>IntelliSmar_Rejected_By</th>
+<th>Discom_Rejected_Remarks</th>
+<th>Discom_Rejected_Date</th>
+<th>Rejected_By_Discom</th>
+<th>No_Of_Rejections</th>
+<th>Area</th>
+<th>CT_Chamber_Seal_No</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor=" let mi of miDetails" >
+        <td>{{mi.consumerIndex.sequence_No}}</td>
+        <td>{{mi.consumerIndex.discom}}</td>
+        <td>{{mi.consumerIndex.zone}}</td>
+        <td>{{mi.consumerIndex.circle}}</td>
+        <td>{{mi.consumerIndex.division}}</td>
+        <td>{{mi.consumerIndex.sub_Division}}</td>
+        <td>{{mi.consumerIndex.substation_Code}}</td>
+        <td>{{mi.consumerIndex.feeder_Name}}</td>
+        <td>{{mi.consumerIndex.consumer_Number}}</td>
+        <td>{{mi.consumerIndex.landmark}}</td>
+        <td>{{mi.consumerIndex.consumer_Name}}</td>
+        <td>{{mi.consumerIndex.address}}</td>
+        <td>{{mi.consumerIndex.area}}</td>
+        <td>{{mi.consumerIndex.mobile_Number}}</td>
+        <td>{{mi.consumerIndex.email_ID}}</td>
+        <td>{{mi.consumerIndex.billing_Type}}</td>
+        <td>{{mi.consumerIndex.old_Meter_Number}}</td>
+        <td>{{mi.consumerIndex.old_Meter_Manufacturer}}</td>
+        <td>{{mi.consumerIndex.load_Unit}}</td>
+        <td>{{mi.consumerIndex.meter_Location}}</td>
+        <td>{{mi.consumerIndex.old_Meter_Status}}</td>
+        <td>{{mi.consumerIndex.old_meter_Current_Kva_CI}}</td>
+        <td>{{mi.consumerIndex.old_meter_Current_Kvah_CI}}</td>
+        <td>{{mi.consumerIndex.old_meter_Current_Kwh_CI}}</td>
+        <td>{{mi.consumerIndex.old_Meter_Phase}}</td>
+        <td>{{mi.consumerIndex.survey_done_by}}</td>
+        <td>{{mi.consumerIndex.contractor_Name}}</td>
+        <td>{{mi.consumerIndex.ci_Date}}</td>
+        <td>{{mi.consumerIndex.ci_Remarks}}</td>
+
+      <td>{{mi.lt_Pole_Condtion_For_Service_Cable}}</td>
+<td>{{mi.is_Armoured_Service_Cable_To_Be_Installed}}</td>
+<td>{{mi.neutral_Availability}}</td>
+<td>{{mi.village_Name}}</td>
+<td>{{mi.village_Census_Code}}</td>
+<td>{{mi.gram_Panchayat}}</td>
+<td>{{mi.block}}</td>
+<td>{{mi.majra_Mohalla_Street_Name}}</td>
+<td>{{mi.old_Meter_Billing_Type}}</td>
+<td>{{mi.scan_Barcode_Sticker_Placed_On_Old_Meter}}</td>
+<td>{{mi.old_Meter_Number_MI}}</td>
+<td>{{mi.new_Meter_Number}}</td>
+<td>{{mi.mismatch_Between_old_Meter_Number_Of_CI_And_MI}}</td>
+<td>{{mi.new_Meter_Billing_Type}}</td>
+<td>{{mi.meter_Communication_Type}}</td>
+<td>{{mi.meter_CT_Ratio}}</td>
+<td>{{mi.meter_PT_Ratio}}</td>
+<td>{{mi.line_CT_Ratio}}</td>
+<td>{{mi.line_PT_Ratio}} </td>
+<td>{{mi.network_Provider_Name_SIM1}}</td>
+<td>{{mi.signal_Strength_SIM1}}</td>
+<td>{{mi.signal_Category_SIM1}}</td>
+<td>{{mi.network_Type1}}</td>
+<td>{{mi.network_Provider_Name_SIM2}}</td>
+<td>{{mi.signal_Strength_SIM2}}</td>
+<td>{{mi.signal_Category_SIM2}}</td>
+<td>{{mi.network_Type2}}</td>
+<td>{{mi.length_Of_Service_Cable_In_Meter}}</td>
+<td>{{mi.cable_Type}}</td>
+<td>{{mi.old_Meter_Current_KWH_MI}}</td>
+<td>{{mi.mismatch_Between_Reading_Of_CI_And_MI}}</td>
+<td>{{mi.old_Meter_Current_KVAH_MI}}</td>
+<td>{{mi.old_Meter_KVA_MI}}</td>
+<td>{{mi.new_Meter_Current_KWH}}</td>
+<td>{{mi.new_Meter_Current_KVAH}}</td>
+<td>{{mi.new_Meter_Phase}}</td>
+<td>{{mi.meter_Installation_Type}}</td>
+<td>{{mi.meter_Box_Seal_Number1}}</td>
+<td>{{mi.meter_Box_Seal_Number2}}</td>
+<td>{{mi.nic_Card1}}</td>
+<td>{{mi.nic_Card2}}</td>
+<td>{{mi.nic_Seal_Number1}}</td>
+<td>{{mi.nic_Seal_Type}}</td>
+<td>{{mi.meter_Body_Seal_Type}}</td>
+<td>{{mi.terminal_Seal_Number1}}</td>
+<td>{{mi.terminal_Seal_Number2}}</td>
+<td>{{mi.meter_Box_Seal_Type}}</td>
+<td>{{mi.mrn_No}}</td>
+<td>{{mi.page_No}}</td>
+<td>{{mi.new_Meter_Manufacturer}}</td>
+<td>{{mi.error_Code_Error_Description}}</td>
+<td>{{mi.latitude}}</td>
+<td>{{mi.longitude}}</td>
+<td>{{mi.updated_By}}</td>
+<td>{{mi.new_Meter_Installed_Date}}</td>
+<td>{{mi.status}}</td>
+<td>{{mi.qc_Contractor_Approved_Date}}</td>
+<td>{{mi.approved_By_QC_Contractor}}</td>
+<td>{{mi.intelliSmart_Approved_Date}}</td>
+<td>{{mi.approved_By_IntelliSmart}}</td>
+<td>{{mi.discom_Approved_Date}}</td>
+<td>{{mi.approved_By_Discom}}</td>
+<td>{{mi.qc_Contractor_Rejected_Remarks}}</td>
+<td>{{mi.qc_Contractor_Rejected_Date}}</td>
+<td>{{mi.rejected_By_QC_Contractor}}</td>
+<td>{{mi.intelliSmart_Rejected_Remarks}}</td>
+<td>{{mi.intelliSmart_Rejected_Date}}</td>
+<td>{{mi.intelliSmar_Rejected_By}}</td>
+<td>{{mi.discom_Rejected_Remarks}}</td>
+<td>{{mi.discom_Rejected_Date}}</td>
+<td>{{mi.rejected_By_Discom}}</td>
+<td>{{mi.no_Of_Rejections}}</td>
+<td>{{mi.area}}</td>
+<td>{{mi.ct_Chamber_Seal_No}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+

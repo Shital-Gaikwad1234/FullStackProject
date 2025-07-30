@@ -1,0 +1,81 @@
+import { ConsumerIndexing } from "./consumerIndexing.model";
+
+export interface MeterInstallation{
+    
+  consumerIndex:ConsumerIndexing;
+  lt_Pole_Condtion_For_Service_Cable:string;
+  is_Armoured_Service_Cable_To_Be_Installed:string;
+  neutral_Availability:string;
+  village_Name:string;
+  village_Census_Code:string;
+  gram_Panchayat:string;
+  block:string;
+  majra_Mohalla_Street_Name:string;
+  old_Meter_Billing_Type:string;
+  scan_Barcode_Sticker_Placed_On_Old_Meter:string;
+  old_Meter_Number_MI:string;
+  new_Meter_Number:string;
+  mismatch_Between_old_Meter_Number_Of_CI_And_MI:boolean;
+  new_Meter_Billing_Type:string;
+  meter_Communication_Type:string;
+  meter_CT_Ratio:string;
+  meter_PT_Ratio:string;
+  line_CT_Ratio:string;
+  line_PT_Ratio:string;
+  network_Provider_Name_SIM1:string;
+  signal_Strength_SIM1:string;
+  signal_Category_SIM1:string;
+  network_Type1:string;
+  network_Provider_Name_SIM2:string;
+  signal_Strength_SIM2:string;
+  signal_Category_SIM2:string;
+  network_Type2:string;
+  length_Of_Service_Cable_In_Meter:number;
+  cable_Type:string;
+  old_Meter_Current_KWH_MI:number;
+  mismatch_Between_Reading_Of_CI_And_MI:string;
+  old_Meter_Current_KVAH_MI:number;
+  old_Meter_KVA_MI:number;
+  new_Meter_Current_KWH:number;
+  new_Meter_Current_KVAH:number;
+  new_Meter_Phase:string;
+  meter_Installation_Type:string;
+  meter_Box_Seal_Number1:string;
+  meter_Box_Seal_Number2:string;
+  nic_Card1:string;
+  nic_Card2:string;
+  nic_Seal_Number1:string;
+nic_Seal_Type:string;
+meter_Body_Seal_Type:string
+terminal_Seal_Number1:string;
+terminal_Seal_Number2 :string;
+meter_Box_Seal_Type:string;
+mrn_No:string;
+page_No:string;
+new_Meter_Manufacturer:string;
+error_Code_Error_Description:string;
+latitude:string;
+longitude:string;
+updated_By:string;
+new_Meter_Installed_Date:Date;
+status:string;
+qc_Contractor_Approved_Date:Date;
+approved_By_QC_Contractor:string
+intelliSmart_Approved_Date:Date;
+approved_By_IntelliSmart:string;
+discom_Approved_Date:Date;
+approved_By_Discom:String;
+qc_Contractor_Rejected_Remarks:string;
+qc_Contractor_Rejected_Date:Date;
+rejected_By_QC_Contractor:string;
+intelliSmart_Rejected_Remarks:string;
+intelliSmart_Rejected_Date:Date;
+intelliSmar_Rejected_By:string;
+discom_Rejected_Remarks:string;
+discom_Rejected_Date:Date;
+rejected_By_Discom:string;
+no_Of_Rejections:number;
+area:string;
+ct_Chamber_Seal_No:string;
+
+}

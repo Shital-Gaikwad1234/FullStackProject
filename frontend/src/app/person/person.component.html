@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary" class="user-details-toolbar">
+
+  <button mat-icon-button (click)="goBack()" style="background-color: white;">
+    <mat-icon style="color: #8fc750; background-color: white;">home</mat-icon>
+  </button>
+
+   <span class="company-logo">
+    <img Src="assets/images/intellismart_logo.jpg" alt="Description of my image" style="height: 60px;" >
+  </span>
+ 
+
+  <span class="toolbar-spacer"></span> <div class="user-profile-toolbar-right">
+    <img Src="assets/images/profile.png" alt="User Profile" class="toolbar-profile-image">
+    <br>
+    <span class="toolbar-username">{{user?.name || 'User Name'}}</span>
+  </div>
+</mat-toolbar>
+
+<div class="user-details-content">
+   <h2 style="text-align: center; margin-left: 60px; font-weight: bold; font-size: xx-large; color: navy;">User Profile</h2>
+  <div class="ci-mi-counters" style="background-color: #8fc750;">
+    <button mat-raised-button color="primary" class="ci-mi-button" style="margin-top: 20px;">
+      Total No CI Completed = {{200}}<br>
+    </button>
+    <button mat-raised-button color="accent" class="ci-mi-button" style="margin-top: 20px;">
+      Total No MI Completed = {{100}} <br> 
+    </button>
+  </div>
+
+  <div class="user-info-card">
+    <h2 class="user-name-display" style="text-align:left;">{{user?.name }}</h2>
+    <p><mat-icon color="accent">smartphone</mat-icon> Mobile: {{user?.mobile_Number || 'N/A'}}</p>
+    <p><mat-icon color="accent">email</mat-icon> Email: {{user?.email_Id || 'N/A'}}</p>
+    <p><mat-icon color="accent">badge</mat-icon> Role: {{user?.role || 'N/A'}}</p>
+    <p><mat-icon color="accent">engineering</mat-icon> Contractor: {{user?.contractor || 'N/A'}}</p>
+    <p><mat-icon color="accent">domain</mat-icon> Subdivision: {{user?.subdivision || 'N/A'}}</p>
+  </div>
+
+</div>

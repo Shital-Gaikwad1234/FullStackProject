@@ -1,0 +1,124 @@
+    .profile-container{
+        /* width: 98%; 
+        margin:auto auto;
+        padding-top: 40px;
+        /* padding: 2rem; */
+        /* box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        text-align: center;
+        border-radius: 10px;
+        background-color: #fff;  */
+
+         width: 95%; /* Use percentage for better responsiveness */
+  max-width: 1400px; /* Set a max-width to prevent it from getting too wide */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-x: auto; /* Enable horizontal scrolling for the table if needed */
+  border: 1px solid #e0e0e0;
+       
+    }
+
+ .header-container {
+  background-color: #8fc750; /* A brighter, more modern green */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space between header and table container */
+  color: white; /* Text color for the header */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Flexbox for header content to align title and count box */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Pushes title to left, count box to right */
+  align-items: center; /* Vertically centers items */
+  max-width: 1200px; /* Max width to control overall layout */
+  margin: 0 auto; /* Center the content within the container */
+  padding: 0 15px; /* Inner padding */
+}
+
+.header-title {
+  margin: 0; /* Remove default margin from h2 */
+  font-size: 2.2em; /* Larger, more prominent title */
+  color: #fff; /* White color for the title */
+  font-weight: 600;
+}
+
+.ci-count-box {
+  background-color: navy; /* Darker, contrasting color for the count box */
+  color: #fff;
+  padding: 12px 25px; /* More generous padding */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow to make it pop */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  margin-top: 0; /* Remove default table margin */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px; /* More padding for readability */
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Light separator lines */
+  white-space: nowrap; /* Prevent header text from wrapping */
+}
+
+.headRow {
+  background-color: #f2f2f2; /* Light grey background for header row */
+  color: #333; /* Darker text for header */
+  font-weight: 600; /* Bolder header text */
+  border-bottom: 2px solid #8fc750; /* A strong bottom border for the header */
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5; /* Subtle hover effect on rows */
+}
+
+/* Style for odd/even rows for better readability */
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center;
+  }
+
+  .header-title {
+    margin-bottom: 15px; /* Add space between title and count box when stacked */
+  }
+
+  .profile-container {
+    padding: 15px;
+    width: 98%; /* More width on smaller screens */
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px; /* Reduce padding on smaller screens */
+    font-size: 0.9em; /* Smaller font size for table content */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.8em;
+  }
+
+  .ci-count-box {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+

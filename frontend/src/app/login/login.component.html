@@ -1,0 +1,17 @@
+<div class="text-center" style="margin-top: 20px;">
+  <img ngSrc="assets/images/intellismart_logo.jpg" alt="Description of my image" width="300" height="70">
+</div>
+<div class="login-container">
+<p class="text-center" style="color: #8fc750; font-weight: bold; font-size: 50PX;"> LOGIN </p>
+<form >
+  <div class="text-center" style="margin: auto;height: auto; width: auto;">
+  <label>Username</label>
+  <input type="email" [(ngModel)]="email" name="email" required placeholder="Enter the Username"/><br>
+  <br>
+  <label>Password</label>
+  <input type="email" [(ngModel)]="password" name="password" required placeholder="Enter the Password"/><br>
+  
+  <button type="button" (click)="login()"> Login </button>
+  </div>
+</form>
+</div>

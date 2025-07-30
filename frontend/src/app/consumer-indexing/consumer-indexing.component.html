@@ -1,0 +1,79 @@
+
+<div class="header-container">
+  <div class="header-content">
+    <h2  class="header-title">Consumer Indexing</h2>
+    <div class="ci-count-box" > <label>Number of CI {{23}}</label> </div>
+  </div>
+</div>
+<div class="profile-container">
+<table class="table table-striped">
+    <thead class="headRow">
+      <tr>
+<th>Sequence_No</th> 
+<th>Discom</th> 
+<th>Zone</th>
+<th>Circle</th>
+<th>Division</th>
+<th>Sub_Division</th>
+<th>Substation_Code</th>
+<th>Feeder_Name</th>
+<th>Consumer_Number</th>
+<th>Landmark</th>
+<th>Consumer_Name</th>
+<th>Address</th>
+<th>Area</th>
+<th>Mobile_Number</th>
+<th>Email_ID</th>
+<th>Billing_Type</th>
+<th>Old_Meter_Number</th>
+<th>Old_Meter_Manufacturer</th>
+<th>Load_Unit</th>
+<th>Meter_Location</th>
+<th>Old_Meter_Status</th>
+<th>Old_meter_Current_Kva_CI</th>
+<th>Old_meter_Current_Kvah_CI</th>
+<th>Old_meter_Current_Kwh_CI</th>
+<th>Old_Meter_Phase</th>
+<th>Survey_done_by</th>
+<th>Contractor_Name</th>
+<th>CI_Date</th>
+<th>CI_Remarks</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor=" let ci of cidetails" >
+        <td>{{ci.sequence_No}}</td>
+        <td>{{ci.discom}}</td>
+        <td>{{ci.zone}}</td>
+        <td>{{ci.circle}}</td>
+        <td>{{ci.division}}</td>
+        <td>{{ci.sub_Division}}</td>
+        <td>{{ci.substation_Code}}</td>
+        <td>{{ci.feeder_Name}}</td>
+        <td>{{ci.consumer_Number}}</td>
+        <td>{{ci.landmark}}</td>
+        <td>{{ci.consumer_Name}}</td>
+        <td>{{ci.address}}</td>
+        <td>{{ci.area}}</td>
+        <td>{{ci.mobile_Number}}</td>
+        <td>{{ci.email_ID}}</td>
+        <td>{{ci.billing_Type}}</td>
+        <td>{{ci.old_Meter_Number}}</td>
+        <td>{{ci.old_Meter_Manufacturer}}</td>
+        <td>{{ci.load_Unit}}</td>
+        <td>{{ci.meter_Location}}</td>
+        <td>{{ci.old_Meter_Status}}</td>
+        <td>{{ci.old_meter_Current_Kva_CI}}</td>
+        <td>{{ci.old_meter_Current_Kvah_CI}}</td>
+        <td>{{ci.old_meter_Current_Kwh_CI}}</td>
+        <td>{{ci.old_Meter_Phase}}</td>
+        <td>{{ci.survey_done_by}}</td>
+        <td>{{ci.contractor_Name}}</td>
+        <td>{{ci.ci_Date}}</td>
+        <td>{{ci.ci_Remarks}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+

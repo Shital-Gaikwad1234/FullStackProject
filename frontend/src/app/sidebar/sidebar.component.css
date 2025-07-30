@@ -1,0 +1,200 @@
+/* .sidenav-container{
+    height: 100vh;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 75px;
+    background-color: white;
+
+}
+
+.company-logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.spacer{
+    border-radius: 50%;
+    align-items: end;
+}
+
+.content-area{
+    background-color: white;
+    border-radius: 0%;
+    height: 4px;
+} */
+
+
+
+/* General Body/HTML structure (optional, but good practice) */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Material Design default font */
+  background-color: #f4f7f6; /* Light background for the overall page */
+}
+
+/* Sidenav Container */
+.sidenav-container {
+  height: 100vh;
+  /* flexbox will be handled by mat-sidenav-container itself */
+}
+
+/* Sidenav (the sidebar itself) */
+.sidenav {
+  width: 250px; /* Standard sidebar width */
+  background-color:#8fc750 ; /* Darker theme for the sidenav */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Sidenav List Items */
+mat-nav-list {
+  padding-top: 0; /* Remove default padding for a cleaner top edge */
+}
+
+mat-list-item {
+  color: #ecf0f1; /* Light text color for menu items */
+  transition: background-color 0.2s ease;
+  height: 48px; /* Standard Material list item height */
+}
+
+mat-list-item:hover {
+  background-color: #34495e; /* Slightly lighter hover background */
+  cursor: pointer;
+}
+
+mat-list-item .mat-icon {
+  margin-right: 15px; /* Space between icon and text */
+  color: #bdc3c7; /* Lighter color for icons */
+}
+
+mat-list-item span {
+  font-weight: 500; /* Medium font weight for text */
+}
+
+/* Toolbar */
+.toolbar {
+  /* `color="primary"` on mat-toolbar sets its background, so we don't need `background-color: white;` here unless overriding */
+  /* If you explicitly want white, override Material's primary color: */
+  background-color: white !important; /* Use !important if color="primary" is stubborn */
+  color: #333 !important; /* Dark text/icon color for a white toolbar */
+  height: 64px; /* Standard Material Design toolbar height */
+  padding: 0 16px; /* Material Design standard padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  z-index: 2; /* Ensure toolbar is above sidenav-content and potentially others */
+}
+
+/* Menu Button (hamburger icon) */
+.toolbar button[mat-icon-button] {
+  color: #555; /* Icon color on toolbar */
+}
+
+/* Company Logo in Toolbar */
+.company-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* To center the image itself */
+  align-items: center;
+  height: 100%; /* Make sure it takes full height of toolbar */
+}
+
+.company-logo img {
+  max-height: 40px; /* Control logo height, allow width to scale */
+  width: auto;
+}
+
+/* User Profile Area (formerly .spacer) */
+/* Renamed to `user-profile-area` for clarity */
+.user-profile-area {
+    margin-left: 1400px;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Indicate it's clickable */
+  padding: 5px 10px; /* Add some padding around the whole area */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: background-color 0.2s ease;
+}
+
+.user-profile-area:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
+}
+
+.profile-image {
+    align-items: end;
+  width: 40px; /* Size of the profile image */
+  height: 40px;
+  border-radius: 50%; /* Make it round */
+  object-fit: cover; /* Ensure image covers the area */
+  border: 2px solid #ccc; /* Subtle border around the image */
+  margin-right: 10px; /* Space between image and text/icon */
+}
+
+.user-profile-area h2 {
+  margin: 0; /* Remove default margin for h2 */
+  font-size: 1em; /* Adjust font size */
+  font-weight: 500; /* Medium weight for name */
+  color: #333; /* Color for 'Admin' text */
+  margin-right: 8px; /* Space between Admin text and logout icon */
+  white-space: nowrap; /* Prevent "Admin" from wrapping */
+}
+
+.user-profile-area .mat-icon {
+  font-size: 20px; /* Adjust logout icon size */
+  height: 20px;
+  width: 20px;
+  color: #777; /* Color for the logout icon */
+  margin-top: 2px; /* Slight vertical adjust if needed */
+}
+
+/* Content Area (the main view) */
+.content-area {
+  background-color: #f4f7f6; /* A light, off-white background for content */
+  flex-grow: 1; /* VERY IMPORTANT: Makes this div take up all available vertical space */
+  overflow: auto; /* Adds scrollbars to this div if content overflows */
+  padding: 20px; /* Padding around your router outlet content */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  /* Remove height: 4px; and border-radius: 0%; as they are default or problematic */
+}
+
+/* Responsive Adjustments for Toolbar */
+@media (max-width: 768px) {
+  .toolbar {
+    height: 56px; /* Standard mobile toolbar height */
+    padding: 0 8px; /* Less padding on small screens */
+  }
+
+  .company-logo {
+    /* Adjust logo positioning for smaller screens */
+    position: static; /* No absolute positioning */
+    transform: none; /* No transform */
+    margin-left: 10px; /* Space from menu icon */
+    flex-grow: 1; /* Allow it to take up space */
+    text-align: left; /* Align to the left of the remaining space */
+  }
+
+  .company-logo img {
+    max-height: 35px; /* Smaller logo on mobile */
+  }
+
+  .user-profile-area {
+    padding: 5px; /* Reduce padding */
+  }
+
+  .profile-image {
+    width: 32px; /* Smaller avatar */
+    height: 32px;
+    margin-right: 5px;
+    
+  }
+
+  .user-profile-area h2 {
+    display: none; /* Hide "Admin" text on very small screens to save space */
+  }
+}

@@ -1,0 +1,210 @@
+/* div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 10px 0 ;
+} */
+
+
+/* General Layout & Colors (consistent with previous sections) */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* User Details Toolbar */
+.user-details-toolbar {
+  background-color: #8fc750 !important; /* White toolbar */
+  color: #333 !important; /* Dark text/icons */
+  height: 70px;
+  padding: 0 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  z-index: 2; /* Ensure it's on top */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-details-toolbar button[mat-icon-button] {
+  color: #555; /* Icon color */
+}
+
+/* Toolbar Spacer (pushes next content to the right) */
+.toolbar-spacer {
+  flex-grow: 1;
+}
+
+/* User Profile on Toolbar Right */
+.user-profile-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and username */
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  cursor: pointer; /* Indicate clickability if it leads to full profile */
+}
+
+.user-profile-toolbar-right:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
+}
+
+.toolbar-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  
+}
+
+.toolbar-username {
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap; /* Prevent username from wrapping */
+}
+
+/* User Details Main Content Area */
+.user-details-content {
+  padding: 20px;
+  max-width: 900px; /* Max width for content to keep it readable */
+  margin: 20px auto; /* Center the content area horizontally */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+}
+
+/* CI/MI Counters Section */
+.ci-mi-counters {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 30px; /* Space between the two buttons */
+  margin-bottom: 40px; /* Space below buttons before user info */
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee; /* Separator line */
+}
+
+.ci-mi-button {
+  background-color: navy; /* Green color for CI button */
+  /* For MI, you can use color="accent" in HTML which is typically purple */
+  color: white;
+  min-width: 180px; /* Minimum width for buttons */
+  height: 80px; /* Taller buttons for prominence */
+  border-radius: 8px; /* Slightly more rounded */
+  font-size: 1.1em; /* Larger font size */
+  font-weight: bold;
+  line-height: 1.2; /* Adjust line height for multiline text */
+  text-align: center;
+  display: flex; /* For vertical centering of text */
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for pop */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Hover effect */
+}
+
+.ci-mi-button:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* User Information Card */
+.user-info-card {
+  text-align: left; /* Align text left within the card */
+  padding: 0 20px; /* Padding inside the info section */
+}
+
+.user-name-display {
+  font-size: 2em;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center; /* Center the name */
+}
+
+.user-info-card p {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.user-info-card .mat-icon {
+  margin-right: 10px;
+  font-size: 22px;
+  height: 22px;
+  width: 22px;
+  color: #8fc750; /* Use your primary green for icons */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .user-details-toolbar {
+    height: 56px;
+    padding: 0 10px;
+  }
+
+  .toolbar-profile-image {
+    width: 32px;
+    height: 32px;
+  }
+
+  .toolbar-username {
+    font-size: 0.9em;
+  }
+
+  .user-details-content {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .ci-mi-counters {
+    background-color: navy;
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    
+  }
+
+  .ci-mi-button {
+    width: 100%; /* Full width buttons when stacked */
+    min-width: unset;
+    height: 70px;
+    font-size: 1em;
+    
+  }
+
+  .user-name-display {
+    font-size: 1.8em;
+  }
+
+  .user-info-card p {
+    font-size: 1em;
+    text-align: center;
+
+  }
+
+  .user-info-card .mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar-username {
+    display: none; /* Hide username on very small screens to save space */
+  }
+}
+
+.company-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* To center the image itself */
+  align-items: center;
+  height: 20px;
+}

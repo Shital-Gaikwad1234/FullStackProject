@@ -1,0 +1,35 @@
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="over" class="sidenav" [(opened)]="isSidenavOpen" >
+    <mat-nav-list>
+
+        <mat-list-item *ngFor="let menu of MenuList" [routerLink]="[menu.MenuUrl]" (click)="onLinkClick(menu)">
+            <mat-icon style="color: white; fill: white;">{{menu.icon}}</mat-icon>
+            <span>{{menu.MenuName}}</span>
+        </mat-list-item>
+    </mat-nav-list>
+     </mat-sidenav>
+
+     <mat-sidenav-content>
+        <mat-toolbar color="primary" class="toolbar">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span class="company-logo">
+              <img ngSrc="assets/images/intellismart_logo.jpg" alt="Description of my image" width="300" height="70">
+            </span>
+
+            <span class="user-profile-area" (click)="toggleUserMenu()" >
+              <img ngSrc="assets/images/profile.png" alt="Description of my image" width="50" height="50" class="profile-image" >
+              <mat-icon>logout</mat-icon>
+              <br>
+              <h2>Admin</h2>
+            </span>
+        </mat-toolbar>
+           
+            <div class="content-area" >
+                 <router-outlet></router-outlet>
+            </div>
+     </mat-sidenav-content>
+</mat-sidenav-container>
